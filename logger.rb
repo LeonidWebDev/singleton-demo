@@ -7,7 +7,7 @@ class Logger
     @@x = Logger.new
 
     def self.instance
-        return @x
+        return @@x
     end
 
     # class method

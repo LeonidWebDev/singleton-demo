@@ -1,7 +1,6 @@
 require './logger'   
 
 
-Logger.say_something
 Logger.instance.log_something 'dwhakdawdhuia'
 
 #Logger.instance.log_something = @@x.log_something
