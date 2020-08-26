@@ -1,30 +1,4 @@
-class Logger
-
-    def initialize
-        @f = File.open 'log.txt', 'a'
-    end
-
-    @@x = nil
-
-    def self.instance
-        if @@x == nil
-            @xx = Logger.new
-        end
-
-        return @xx
-    end
-
-    # class method
-    def self.say_something
-        puts 'haha'
-    end
-
-    #instance method
-    def log_something wat
-        @f.puts wat
-        @f.close
-    end
-end      
+require './logger'   
 
 
 Logger.say_something
@@ -32,9 +6,9 @@ Logger.instance.log_something 'dwhakdawdhuia'
 
 #Logger.instance.log_something = @@x.log_something
 
-
-logger = Logger.new
-logger.log_something 'wazzuuppp'
+# не работает после появления приватного метода с нью
+# logger = Logger.new
+# logger.log_something 'wazzuuppp'
 
 
 # @variable - переменная объекта
